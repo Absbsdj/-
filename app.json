@@ -1,0 +1,46 @@
+{
+    "name": "سورس خاص",
+    "description": "فريدوم حب",
+    "logo": "https://telegra.ph/file/7cf0196f135b978d6fbd3.jpg",
+    "keywords": [
+        "Telegram",
+        "VCBot",
+        "MusicPlayer"
+    ],
+    "repository": "https://github.com/basharm98/music",
+    "env": {
+        "SESSION": {
+            "description": "اكتب كود ترمكس",
+            "required": true
+        },
+        "API_ID": {
+            "description": "21580711",
+            "required": true
+        },
+        "API_HASH": {
+            "description": "7254971c5396721d7e903cdba7950355",
+            "required": true
+        },
+        "HNDLR": {
+            "description": "اتركها كما هي",
+            "value": "",
+            "required": false
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        },
+        {
+            "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "free"
+        }
+    },
+    "stack": "container"
+}
